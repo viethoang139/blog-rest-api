@@ -35,7 +35,7 @@ public class PostController {
     )
     @ApiResponse(
             responseCode = "201",
-            description = "Http Status 201 CREATED"
+            description = "HTTP Status CREATED"
     )
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
@@ -49,7 +49,7 @@ public class PostController {
     )
     @ApiResponse(
             responseCode = "200",
-            description = "Http Status 200 OK"
+            description = "HTTP Status OK"
     )
     @GetMapping("/{id}")
     public ResponseEntity<PostDto> getPostById(@PathVariable("id") Long postId){
@@ -62,7 +62,7 @@ public class PostController {
     )
     @ApiResponse(
             responseCode = "200",
-            description = "Http Status 200 OK"
+            description = "HTTP Status OK"
     )
     @GetMapping("/search")
     public ResponseEntity<List<PostDto>> search(@RequestParam String query){
@@ -75,7 +75,7 @@ public class PostController {
     )
     @ApiResponse(
             responseCode = "200",
-            description = "Http Status 200 OK"
+            description = "HTTP Status OK"
     )
     @GetMapping
     public ResponseEntity<ResponseApiDto> getAllPosts(@RequestParam(value = "pageNo",defaultValue = Constants.DEFAULT_PAGE_NO,required = false) int pageNo,
@@ -94,7 +94,7 @@ public class PostController {
     )
     @ApiResponse(
             responseCode = "200",
-            description = "Http Status 200 OK"
+            description = "HTTP Status OK"
     )
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/{id}")
@@ -112,7 +112,7 @@ public class PostController {
     )
     @ApiResponse(
             responseCode = "200",
-            description = "Http Status 200 OK"
+            description = "HTTP Status OK"
     )
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")

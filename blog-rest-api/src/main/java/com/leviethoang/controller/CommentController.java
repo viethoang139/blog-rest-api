@@ -28,7 +28,7 @@ public class CommentController {
     )
     @ApiResponse(
             responseCode = "201",
-            description = "Http Status 201 CREATED"
+            description = "HTTP Status CREATED"
     )
     @PostMapping("/posts/{postId}/comments")
     public ResponseEntity<CommentDto> createComment(@RequestBody @Valid CommentDto commentDto,
@@ -42,7 +42,7 @@ public class CommentController {
     )
     @ApiResponse(
             responseCode = "200",
-            description = "Http Status 200 OK"
+            description = "HTTP Status OK"
     )
     @GetMapping("/posts/{postId}/comments/{commentId}")
     public ResponseEntity<CommentDto> getCommentById(@PathVariable Long postId,
@@ -56,7 +56,7 @@ public class CommentController {
     )
     @ApiResponse(
             responseCode = "200",
-            description = "Http Status 200 OK"
+            description = "HTTP Status OK"
     )
     @GetMapping("/posts/{postId}/comments")
     public ResponseEntity<List<CommentDto>> getAllCommentsByPostId(@PathVariable Long postId){
@@ -69,7 +69,7 @@ public class CommentController {
     )
     @ApiResponse(
             responseCode = "200",
-            description = "Http Status 200 OK"
+            description = "HTTP Status OK"
     )
     @PutMapping("/posts/{postId}/comments/{commentId}")
     public ResponseEntity<CommentDto> updateCommentById(@RequestBody @Valid CommentDto commentDto,
@@ -84,7 +84,7 @@ public class CommentController {
     )
     @ApiResponse(
             responseCode = "200",
-            description = "Http Status 200 OK"
+            description = "HTTP Status OK"
     )
     @DeleteMapping("/posts/{postId}/comments/{commentId}")
     public ResponseEntity<String> deleteCommentById(@PathVariable Long postId,

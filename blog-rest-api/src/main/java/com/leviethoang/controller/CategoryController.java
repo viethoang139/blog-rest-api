@@ -36,7 +36,7 @@ public class CategoryController {
     )
     @ApiResponse(
             responseCode = "201",
-            description = "Http Status 201 CREATED"
+            description = "HTTP Status CREATED"
     )
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
@@ -50,7 +50,7 @@ public class CategoryController {
     )
     @ApiResponse(
             responseCode = "200",
-            description = "Http Status 200 OK"
+            description = "HTTP Status OK"
     )
     @GetMapping("/{id}")
     public ResponseEntity<CategoryDto> getCategoryById(@PathVariable("id") Long categoryId){
@@ -92,7 +92,7 @@ public class CategoryController {
     )
     @ApiResponse(
             responseCode = "200",
-            description = "Http Status 200 OK"
+            description = "HTTP Status OK"
     )
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/{id}")
@@ -110,7 +110,7 @@ public class CategoryController {
     )
     @ApiResponse(
             responseCode = "200",
-            description = "Http Status 200 OK"
+            description = "HTTP Status OK"
     )
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
